@@ -1,9 +1,8 @@
-Recurrent Neural Network (RNN) là một mô hình mạng neural hồi quy gồm 3 thành phần chính là Input layer, Hidden layer và Output layer.
+Recurrent Neural Network (RNN) là một mạng neural hồi quy sử dụng dữ liệu tuần tự hoặc chuỗi thời gian với 3 thành phần chính là Input layer, Hidden layer và Output layer\cite{website2}.
 
-Mô hình tổng hợp và lan truyền thông tin theo trình tự xâu chuỗi. Mô hình được gọi là hồi quy vì thực hiện tính toán ở thời điểm hiện tại sẽ phụ thuộc vào các kết quả tính toán ở những thời điểm trước đó. Do đó, RNN phải nhớ thông tin đã được đưa vào để tính toán trước đó để phục vụ cho các bước tính toán sau này.
+Điểm đặc trưng của RNN là "bộ nhớ" của chúng cho phép sử dụng các thông tin từ đầu vào trước đó để ảnh hưởng đến đầu vào và đầu ra hiện tại, khác với mạng nơ-ron truyền thống.
 
-Sau nhiều bước biến đổi, các thông tin ở những bước đầu tiên bị biến đổi nhiều lần dẫn đến bị triệt tiêu. Do đó, RNN chỉ có nhớ được một vài bước trước đó để mô hình được tối ưu nhất.
-
+Trong bài toán dự đoán giá vàng, RNN sử dụng 2 lớp SimpleRNN và Dense với từng vai trò khác nhau. Lớp SimpleRNN có tác dụng trích xuất các đặc trưng của dữ liệu chuỗi thời gian để nhận diện và học các bước xu hướng thời gian trước đó. Trong khi đó lớp Dense nhận các trích xuất đặc trưng từ lớp SimpleRNN và tổng hợp thông tin tin từ các đơn vị trong lớp RNN để áp dụng các phép biến đổi tuyến tính hoặc phi tuyến. Từ đó, dưới sự kết hợp của 2 lớp, mô hình RNN có thể đưa ra dự đoán giá vàng trong tương lai một cách chính xác.
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=0.4\textwidth]{img/RNN.png}}
 \caption{Kiến trúc RNN}
