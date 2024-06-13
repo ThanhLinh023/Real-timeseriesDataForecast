@@ -15,8 +15,13 @@
 \usepackage{fancyhdr}
 \usepackage{adjustbox}
 \usepackage{lipsum}
-
+\usepackage{tabularx} % for better control over table width
+\usepackage{multirow} % Thêm package multirow
+\usepackage{array}
+\usepackage{makecell}
 \pagestyle{fancy}
+\usepackage[table]{xcolor}
+
 \fancyhf{}
 \rfoot{\thepage}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
@@ -92,7 +97,7 @@
 \input{section/abstract.tex}
 \end{abstract}
 
-Từ khóa: Phân tích chuỗi thời gian, dự báo, LR, ETS, AMIRA, RF, SVM, RNN, GRU, LSTM, TimesNet, Autoformer
+Từ khóa: Phân tích chuỗi thời gian, dự báo, LR, ETS, ARIMA, RF, SVM, RNN, GRU, LSTM, TimesNet, Autoformer
 
 \section{ĐẶT VẤN ĐỀ}
 \input{section/intro.tex}
