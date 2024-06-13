@@ -1,7 +1,13 @@
-SVR (Support Vector Regression) là một loại máy vector hỗ trợ SVM được sử dụng cho các nhiệm vụ phân tích hồi quy. SVR sẽ tìm hàm dự đoán tốt nhất cho giá trị đầu ra liên tục dựa trên giá trị đầu vào cho trước. SVR có thể sử dụng cả các kernel tuyến tính và phi tuyến. Một kernel tuyến tính là tích vô hướng đơn giản giữa hai vector đầu vào, trong khi một kernel phi tuyến là một hàm phức tạp hơn có thể nắm bắt các mẫu phức tạp hơn trong dữ liệu. Sự lựa chọn của kernel phụ thuộc vào các đặc tính của dữ liệu và độ phức tạp của nhiệm vụ.
+SVR (Support Vector Regression) là một một biến thể của phương pháp máy vector hỗ trợ (Support Vector Machines - SVM) được sử dụng cho các bài toán hồi quy. SVR sẽ tìm một hàm hồi quy tốt nhất mà sai số của các dự đoán nằm trong khoảng chấp nhận được. SVR có thể sử dụng các hàm hạt nhân(kernel) để chuyển đổi không gian đầu vào sang không gian đặc trưng cao giúp cho việc xử lý các dữ liệu tuyến tính và phi tuyến. Một kernel tuyến tính là tích vô hướng đơn giản giữa hai vector đầu vào, trong khi một kernel phi tuyến là một hàm phức tạp hơn có thể nắm bắt các mẫu phức tạp hơn trong dữ liệu. 
 
-Không giống như các mô hình hồi quy truyền thống, SVR tập trung vào việc giảm thiểu lỗi dự đoán thay vì khớp dữ liệu một cách chính xác. Để đạt được điều này bằng cách tìm một siêu phẳng tối ưu tối ưu hóa khoảng cách hay biên, giữa các giá trị dự đoán và các điểm dữ liệu thực tế. SVR đạt được sự cân bằng giữa tính đơn giản và tính linh hoạt bằng cách cho phép một mức đúng sai nhất định, hay biên độ lỗi, xung quanh các giá trị dự đoán. Bây giờ chúng ta hãy định nghĩa một loại hàm mất mát khác gọi là hàm mất mát E-insensitive trong SVR.
+Không giống như các mô hình hồi quy truyền thống, SVR tập trung vào việc giảm thiểu lỗi dự đoán thay vì khớp dữ liệu một cách chính xác. Để đạt được điều này bằng cách tìm một siêu phẳng tối ưu tối ưu hóa khoảng cách hay biên, giữa các giá trị dự đoán và các điểm dữ liệu thực tế. SVR đạt được sự cân bằng giữa tính đơn giản và tính linh hoạt bằng cách cho phép một mức đúng sai nhất định, hay biên độ lỗi, xung quanh các giá trị dự đoán.
 
+
+Hàm hồi quy trong SVR:
+\[
+f(x) = \langle w, x \rangle + b
+\]\\
+Hàm mất mát E-insensitive:
 \[
 L(y, F(x_i, \hat{w})) = \max(0, y - F(x_i, \hat{w}) - \varepsilon)
 \]\\
@@ -10,7 +16,7 @@ Trong đó:\\
     \indent\textbullet\ \(y\): giá trị thực.\\
     \indent\textbullet\ \(F(x_i,\hat{w})\): sai số ngẫu nhiên.\\
     \indent\textbullet\ \(\varepsilon\): tham số điều chỉnh cho phép sai lệch.\\
-Dưới đây là một số hàm kernel có thể sử dụng trong SVR
+Dưới đây là một số hàm kernel có thể sử dụng trong SVM
 \begin{table}[htbp]
   \centering
 \begin{tabular}{|c|c|}
@@ -22,7 +28,7 @@ Dưới đây là một số hàm kernel có thể sử dụng trong SVR
      RBF &  $f(X1,X2)=e^{\frac{-{\mid\mid x1-x2 \mid\mid}^2}{2\sigma^2}}$\\ \hline
 \end{tabular}
 \end{table}\\
-\textbf{Linear}: Đây là kernel đơn giản nhất và cơ bản nhất trong SVR. Nó thể hiện chiều tuyến tính của dữ liệu đầu vào không gian tuyến tính.\\
+\textbf{Linear}: Đây là kernel đơn giản nhất và cơ bản nhất trong SVR. Linear phù hợp khi dữ liệu có thể được phân tách tuyến tính trong không gian đầu vào.\\
 \textbf{Polynomial}: Kernel này biến đổi dữ liệu đầu vào không gian đa thức, được xác định bởi tham số bậc và hệ số độ lệch.\\
-\textbf{Sigmoid}: Kernel này biến đổi dữ liệu đầu vào thành không gian phi tuyến bằng cách sử dụng hàm sigmoid. Nó có thể được sử dụng cho các bài toán có dữ liệu nhị phân.\\
-\textbf{RBF}: Kernel này sử dụng hàm RBF để biến đổi dữ liệu đầu vào thành không gian phi tuyến. Hàm RBF được xác định bởi tham số độ dốc.\\
+\textbf{Sigmoid}: Kernel này biến đổi dữ liệu đầu vào thành không gian phi tuyến bằng cách sử dụng hàm sigmoid. Hàm sigmoid áp dụng phép biến đổi phi tuyến lên tích vô hướng của hai vector đầu vào. Ngoài ra có thể được sử dụng cho các bài toán có dữ liệu nhị phân.\\
+\textbf{RBF}: Đây là kernel phi tuyến phổ biến và cho phép mô hình học các cấu trúc phi tuyến phức tạp. Hàm RBF được xác định bởi tham số độ dốc\\
