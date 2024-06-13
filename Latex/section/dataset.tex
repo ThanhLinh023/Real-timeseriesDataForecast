@@ -5,8 +5,17 @@ Bộ dữ liệu sử dụng trong bài nghiên cứu lấy từ  Markets Inside
 \indent\textbullet\ Giá đóng cửa (Close): Giá của kim loại quý khi kết thúc phiên giao dịch trong ngày.\\
 \indent\textbullet\ Giá cao nhất (High): Giá cao nhất mà kim loại quý đạt được trong phiên giao dịch.\\
 \indent\textbullet\ Giá thấp nhất (Low): Giá thấp nhất mà kim loại quý đạt được trong phiên giao dịch.\\
-Tuy nhiên, do mục tiêu của nghiên cứu là dự báo giá đóng cửa, nên chỉ tập trung xử lý dữ liệu liên quan đến cột "Close".
-
+Tuy nhiên, do mục tiêu của nghiên cứu là dự báo giá đóng cửa, nên chỉ tập trung xử lý dữ liệu liên quan đến cột "Close".Trong trường hợp có các ngày giao dịch bị thiếu dữ liệu, nội suy tuyến tính sẽ được áp dụng để ước tính giá trị đóng cửa dựa trên các giá trị liền kề đã biết, đảm bảo tính liên tục và đầy đủ của dữ liệu cho quá trình phân tích và dự báo. Công thức nội suy tuyến tính:\\
+\[
+ y = y1 + ((x - x1) / (x2 - x1)) * (y2 - y1)
+\]
+Chú thích:\\
+\indent\textbullet\ y: Giá trị cần tìm.\\
+\indent\textbullet\ y1: Giá trị Close của ngày gần nhất trước ngày có giá trị bị thiếu.\\
+\indent\textbullet\ y2: Giá trị Close của ngày gần nhất sau ngày có giá trị bị thiếu.\\
+\indent\textbullet\ x: Ngày tại giá trị cần tìm y.\\
+\indent\textbullet\ x1: Ngày tại giá trị Close y1.\\
+\indent\textbullet\ x2: Ngày tại giá trị Close y2.\\
 \subsection{MÔ TẢ THỐNG KÊ}
 \begin{table}[htbp]
   \centering
