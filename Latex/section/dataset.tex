@@ -1,5 +1,11 @@
 \subsection{BỘ DỮ LIỆU}
-Bộ dữ liệu cung cấp thông tin chi tiết dữ liệu giá của 3 kim loại quý, cụ thể là Vàng, Bạch Kim và Palladi trong giai đoạn từ 01/01/2018 đến 01/06/2024. Dữ liệu bao gồm các cột: Ngày (Date), Giá mở cửa (Open), Giá đóng cửa (Close), Giá cao nhất (High), Giá thấp nhất (Low). Do mục tiêu là dự báo giá đóng cửa nên chỉ xử lý dữ liệu liên quan đến cột “Close”.
+Bộ dữ liệu sử dụng trong bài nghiên cứu lấy từ  Markets Insider (https://markets.businessinsider.com) - một trang web cung cấp tin tức thị trường chứng khoán, báo giá và biểu đồ theo thời gian thực. Bộ dữ liệu cung cấp thông tin chi tiết dữ liệu giá của 3 kim loại quý nổi bật nhất (Vàng, Bạch Kim và Palladi) trong giai đoạn từ 01/01/2018 đến 01/06/2024. Dữ liệu bao gồm các cột:\\
+\indent\textbullet\ Ngày (Date): Ngày giao dịch cụ thể.\\
+\indent\textbullet\ Giá mở cửa (Open): Giá của kim loại quý khi bắt đầu phiên giao dịch trong ngày.\\
+\indent\textbullet\ Giá đóng cửa (Close): Giá của kim loại quý khi kết thúc phiên giao dịch trong ngày.\\
+\indent\textbullet\ Giá cao nhất (High): Giá cao nhất mà kim loại quý đạt được trong phiên giao dịch.\\
+\indent\textbullet\ Giá thấp nhất (Low): Giá thấp nhất mà kim loại quý đạt được trong phiên giao dịch.\\
+Tuy nhiên, do mục tiêu của nghiên cứu là dự báo giá đóng cửa, nên chỉ tập trung xử lý dữ liệu liên quan đến cột "Close".
 
 \subsection{MÔ TẢ THỐNG KÊ}
 \begin{table}[htbp]
