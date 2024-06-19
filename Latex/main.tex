@@ -15,15 +15,25 @@
 \usepackage{fancyhdr}
 \usepackage{adjustbox}
 \usepackage{lipsum}
-
+\usepackage{tabularx} % for better control over table width
+\usepackage{multirow} % Thêm package multirow
+\usepackage{array}
+\usepackage{makecell}
 \pagestyle{fancy}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{relsize}
+\usepackage{caption}
+\captionsetup[table]{skip=10pt} 
+\captionsetup[table]{belowskip=-20pt} % Khoảng cách giữa bảng và văn bản tiếp theo
+
 \fancyhf{}
 \rfoot{\thepage}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
-\title{ỨNG DỤNG CÁC MÔ HÌNH THỐNG KÊ, MÁY HỌC VÀ HỌC SÂU ĐỂ DỰ BÁO GIÁ KIM LOẠI QUÝ\\
+\title{DỰ BÁO GIÁ KIM LOẠI QUÝ SỬ DỤNG CÁC MÔ HÌNH THỐNG KÊ, HỌC MÁY VÀ HỌC SÂU\\
 }
 
 \author{\IEEEauthorblockN{1. Phan Minh Trí}
@@ -92,10 +102,12 @@
 \input{section/abstract.tex}
 \end{abstract}
 
-Từ khóa: Phân tích chuỗi thời gian, dự báo, LR, ETS, AMIRA, RF, SVM, RNN, GRU, LSTM, TimesNet, Autoformer
+\begin{IEEEkeywords}
+Dự báo, Kim loại quý, LR, ETS, ARIMA, RF, SVR, RNN, GRU, LSTM, TimesNet, Autoformer
+\end{IEEEkeywords}
 
-\section{ĐẶT VẤN ĐỀ}
-\input{section/intro.tex}
+\section{GIỚI THIỆU}
+\input{section/intro.tex}\\
 
 \section{CƠ SỞ LÝ THUYẾT}
 \input{section/relatedworks/LR.tex}
@@ -116,16 +128,16 @@ Từ khóa: Phân tích chuỗi thời gian, dự báo, LR, ETS, AMIRA, RF, SVM,
 
 \input{section/relatedworks/TimesNet.tex}
 
-\input{section/relatedworks/Autoformer.tex}
+\input{section/relatedworks/Autoformer.tex}\\
 
 \section{ĐỐI TƯỢNG NGHIÊN CỨU}
 \input{section/dataset.tex}
-
+\hfill
 \section{PHƯƠNG PHÁP NGHIÊN CỨU}
-\subsection{LINEAR REGRESSION (LR)}
+\subsection{Linear Regression (LR)}
 \input{section/methods/LR.tex}
 
-\subsection{ETS}
+\subsection{Exponential Smoothing Trend (ETS)}
 \input{section/methods/ETS.tex}
 
 \subsection{ARIMA}
@@ -146,11 +158,11 @@ Từ khóa: Phân tích chuỗi thời gian, dự báo, LR, ETS, AMIRA, RF, SVM,
 \subsection{Long Short Term Memory (LSTM)}
 \input{section/methods/LSTM.tex}
 
-\subsection{TimesNet}
-\input{section/methods/TimesNet.tex}
-
 \subsection{Autoformer}
 \input{section/methods/Autoformer.tex}
+
+\subsection{TimesNet}
+\input{section/methods/TimesNet.tex}
 
 \subsection{Độ đo}
 \input{section/methods/dodo.tex}
