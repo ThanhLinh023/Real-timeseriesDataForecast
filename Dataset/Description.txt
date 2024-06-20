@@ -1,0 +1,16 @@
+Bộ dữ liệu này cung cấp thông tin chi tiết, cập nhật về hợp đồng tương lai của các kim loại quý. Hợp đồng tương lai là các hợp đồng tài chính buộc người mua phải mua, và người bán phải bán các kim loại quý cụ thể là: Vàng (Gold), Bạch kim (Platinum) và Palladium vào một ngày và giá cả được xác định trước trong tương lai.
+
+Các trường hợp sử dụng:
++ Phân tích xu hướng: Xem xét các mô hình và biến động giá để dự đoán hành vi thị trường trong tương lai.
++ Nghiên cứu học thuật: Nghiên cứu hành vi lịch sử và tác động của các sự kiện toàn cầu lên giá kim loại.
++ Chiến lược giao dịch: Thiết kế và xác thực các kỹ thuật giao dịch dựa trên hợp đồng tương lai của kim loại quý.
++ Quản lý rủi ro: Sử dụng dữ liệu để đưa ra quyết định phòng ngừa rủi ro và quản lý rủi ro cho các doanh nghiệp liên quan đến khai thác hoặc giao dịch kim loại quý.
+
+Mô tả cột:
++ Date: Ngày dữ liệu được ghi nhận.
++ Open: Giá mở cửa thị trường.
++ Close: Giá đóng cửa thị trường.
++ High: Giá cao nhất trong ngày giao dịch.
++ Low: Giá thấp nhất trong ngày giao dịch.
+
+Bộ dữ liệu chuỗi thời gian (Từ ngày 1 tháng 1 năm 2018 đến ngày 1 tháng 6 năm 2024)
