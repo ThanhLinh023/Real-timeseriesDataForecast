@@ -1,4 +1,4 @@
-Random forest là một phương pháp thống kê mô hình hóa bằng máy (Machine learning statistic) dùng để phục vụ các mục đích phân loại, tính hồi quy và các nhiệm vụ khác bằng cách xây dựng nhiều cây quyết định (Decision tree). Một cây quyết định là một cách đơn giản để biểu diễn một giao thức. Nói cách khác, cây quyết định biểu diễn một kế hoạch, trả lời câu hỏi phải làm gì trong một hoàn cảnh nhất định.
+Random Forest là một phương pháp học máy mạnh mẽ, được sử dụng để thực hiện các nhiệm vụ phân loại, hồi quy và nhiều tác vụ khác bằng cách xây dựng nhiều cây quyết định và kết hợp chúng lại thành một "rừng". Mỗi cây quyết định trong rừng được huấn luyện trên một mẫu dữ liệu con được lấy ngẫu nhiên từ tập dữ liệu gốc và sử dụng một tập con ngẫu nhiên của các thuộc tính tại mỗi nút để đưa ra dự đoán.
 
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=0.4\textwidth]{img/RF.png}}
@@ -6,6 +6,6 @@ Random forest là một phương pháp thống kê mô hình hóa bằng máy (M
 \label{fig}
 \end{figure}
 
-Mỗi node của cây sẽ là các thuộc tính, và các nhánh là giá trị lựa chọn của thuộc tính đó. Bằng cách đi theo các giá trị thuộc tính trên cây, cây quyết định sẽ cho ta biết giá trị dự đoán. Nhóm thuật toán cây quyết định có một điểm mạnh đó là có thể sử dụng cho cả bài toán phân loại và hồi quy. Do đó, Random Forest có thể được sử dụng vào các nghiên cứu phân tích và dự báo chuỗi thời gian. Random Forest có khả năng tìm ra thuộc tính nào quan trọng hơn so với những thuộc tính khác. Trên thực tế, nó còn có thể chỉ ra rằng một số thuộc tính là không có tác dụng trong cây quyết định. Từ hình 7, chúng ta thấy rằng Random Forest được cấu thành bởi một số cây quyết định. Các cây này cùng nhận đầu vào là đối tượng x và đưa ra quyết định về danh mục thuộc tính của x. Các quyết định này sẽ được tổng hợp lại lấy trung bình để chọn ra quyết định cuối cùng.
+Mỗi node trong của cây quyết định đại diện cho một thuộc tính, và các nhánh biểu thị các giá trị có thể của thuộc tính đó. Bằng cách đi từ gốc đến các node của cây theo các giá trị thuộc tính, cây quyết định có thể dự đoán giá trị đầu ra cho một đối tượng. Điểm mạnh của nhóm thuật toán cây quyết định là khả năng áp dụng vào các bài toán phân loại và hồi quy. Vì vậy, Random Forest có thể được sử dụng để phân tích và dự báo chuỗi thời gian. Random Forest cũng có khả năng đánh giá tầm quan trọng của các thuộc tính, giúp chúng ta hiểu rõ hơn về ảnh hưởng của từng thuộc tính đến kết quả dự đoán. Từ hình trên, ta có thể thấy rằng Random Forest bao gồm nhiều cây quyết định. Khi nhận đầu vào là một đối tượng x, mỗi cây sẽ đưa ra dự đoán riêng về giá trị của biến mục tiêu. Những dự đoán này sau đó được tổng hợp lại bằng cách lấy trung bình để đưa ra quyết định cuối cùng của mô hình.
 
 
