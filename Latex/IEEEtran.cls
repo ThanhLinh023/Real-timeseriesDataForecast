@@ -2582,7 +2582,7 @@
     \def\theparagraphdis{\thesubsubsectiondis.\arabic{paragraph}}
   \fi
 \else% not compsoc
-  \def\thesectiondis{\thesection.}                   % I.
+  \def\thesectiondis{\textbf{\thesection.}}                   % I.
   \def\thesubsectiondis{\Alph{subsection}.}          % B.
   \def\thesubsubsectiondis{\arabic{subsubsection})}  % 3)
   \def\theparagraphdis{\alph{paragraph})}            % d)
