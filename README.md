@@ -1,7 +1,3 @@
-# IS403_O21_10
+# IS403.O21.10 - Project in Business Data Analysis subject
 
-* Phan Minh Trí - 21522709
-* Lê Nguyễn Hoàng Huy - 21520915
-* Vương Thanh Linh - 21521082
-* Nguyễn Thị Tường Vi - 21522787
-* Trần Hạnh Thảo - 21522609
+* Research some Deep Leaning models such as LSTM, RNN, Autoformer, RandomForest. Then use for forecast real-time data and give the prediction of precious metal values (Gold, Platinum, and Palladium) based on trained model.
